@@ -6,129 +6,80 @@
   <title>Access Telegram</title>
   <meta name="description" content="Access the Telegram channel. Click to join." />
   <meta name="robots" content="noindex,nofollow" />
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '938783292217056');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=863937386658423&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  
+  <!-- Tracking Script Added -->
+  <script src="https://track4you.app/a18f1c8c-5285-4589-a2cf-0a3f4b3cd754.js" defer></script>
+
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '938783292217056');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=863937386658423&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     :root { --w: 720px; }
-    body{
-      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:#0b0f19; color:#eaf0ff; line-height:1.45;
-      display:flex; min-height:100vh; align-items:center; justify-content:center;
-      padding:24px;
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #0b0f19;
+      color: #eaf0ff;
+      line-height: 1.45;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
     }
-    .card{
-      width:100%; max-width:var(--w);
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:18px; padding:28px;
-      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    .card {
+      width: 100%;
+      max-width: var(--w);
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      backdrop-filter: blur(10px);
     }
-    h1{ margin:0 0 10px; font-size:28px; letter-spacing:-.2px; }
-    p{ margin:0 0 14px; color:rgba(234,240,255,.86); }
-    ul{ margin:0 0 18px 18px; color:rgba(234,240,255,.86); }
-    .cta{
-      display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
     }
-    a.btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:14px 18px; border-radius:14px; text-decoration:none; font-weight:700;
-      border:1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.10);
-      color:#eaf0ff;
-      min-width: 220px;
+    p {
+      color: #a0aec0;
+      margin-bottom: 32px;
     }
-    a.btn.primary{
-      background: rgba(0, 177, 106, .18);
-      border-color: rgba(0, 177, 106, .35);
+    .btn {
+      display: inline-block;
+      background: #0088cc;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
-    .mini{
-      margin-top:14px; font-size:12px; color:rgba(234,240,255,.62);
-    }
-    .badge{
-      display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px;
-      border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.06);
-      margin-bottom:12px;
-    }
-    .divider{
-      height:1px; background:rgba(255,255,255,.10); margin:18px 0;
+    .btn:hover {
+      background: #0077b5;
     }
   </style>
 </head>
-
 <body>
-  <main class="card">
-    <div class="badge">Secure access • 1-click join</div>
-    <h1>Ready to access the Telegram channel?</h1>
-    <p>Click the button below to join. This step helps avoid wrong links and keeps access organized.</p>
-
-    <ul>
-      <li>Instant access after clicking</li>
-      <li>Works on mobile and desktop</li>
-      <li>No automatic redirects</li>
-    </ul>
-
-    <div class="divider"></div>
-
-    <p><strong>Important:</strong> Make sure Telegram is installed, then tap “Join”.</p>
-
-    <div class="cta">
-      <a class="btn primary" id="joinBtn" href="https://t.me/+dgULAfsVWPhmMDQx" rel="noopener">
-        Join on Telegram
-      </a>
-      <a class="btn" id="helpBtn" href="https://telegram.org/" target="_blank" rel="noopener">
-        Get Telegram
-      </a>
-    </div>
-
-    <p class="mini" id="status"></p>
-
-    <p class="mini">
-      By proceeding, you confirm you want to open Telegram.
-    </p>
-  </main>
-
-  <script>
-    // Track a "content view" after load
-    window.addEventListener('load', function () {
-      try { fbq('track', 'ViewContent'); } catch(e){}
-    });
-
-    const joinBtn = document.getElementById('joinBtn');
-    const statusEl = document.getElementById('status');
-
-    function safeFbqCustom(eventName, params) {
-      try { fbq('trackCustom', eventName, params || {}); } catch(e) {}
-    }
-
-    joinBtn.addEventListener('click', function () {
-      // Custom event for optimization
-      safeFbqCustom('telegram_entry', {
-        page: 'click',
-        source: 'button'
-      });
-
-      // UX feedback (also reduces “instant bounce” look)
-      statusEl.textContent = 'Opening Telegram…';
-
-      // Give the pixel a short moment; do NOT auto-redirect
-      // (the href still opens normally)
-      const t0 = Date.now();
-      while (Date.now() - t0 < 80) { /* tiny delay */ }
-    });
-  </script>
+  <div class="card">
+    <h1>Join our Channel</h1>
+    <p>Click the button below to join our official Telegram channel and receive all updates.</p>
+    <!-- Telegram Channel Button -->
+    <a href="https://t.me/+epecQkqfJc5iN2Y5" class="btn">Join Telegram</a>
+  </div>
 </body>
 </html>
