@@ -6,24 +6,30 @@
   <title>Access Telegram</title>
   <meta name="description" content="Access the Telegram channel. Click to join." />
   <meta name="robots" content="noindex,nofollow" />
+
+  <!-- Seu tracker -->
   <script src="https://track4you.app/a18f1c8c-5285-4589-a2cf-0a3f4b3cd754.js" defer></script>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '938783292217056');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1486916789630516&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
+  <!-- Meta Pixel (APENAS PageView) -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '938783292217056');
+  fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=938783292217056&ev=PageView&noscript=1"/>
+  </noscript>
+
   <style>
     :root { --w: 720px; }
     body{
@@ -91,7 +97,7 @@ src="https://www.facebook.com/tr?id=1486916789630516&ev=PageView&noscript=1"
       <a class="btn primary" id="joinBtn" href="https://t.me/+epecQkqfJc5iN2Y5" rel="noopener">
         Join on Telegram
       </a>
-      <a class="btn" id="helpBtn" href="https://telegram.org/" target="_blank" rel="noopener">
+      <a class="btn" href="https://telegram.org/" target="_blank" rel="noopener">
         Get Telegram
       </a>
     </div>
@@ -104,32 +110,11 @@ src="https://www.facebook.com/tr?id=1486916789630516&ev=PageView&noscript=1"
   </main>
 
   <script>
-    // Track a "content view" after load
-    window.addEventListener('load', function () {
-      try { fbq('track', 'ViewContent'); } catch(e){}
-    });
-
     const joinBtn = document.getElementById('joinBtn');
     const statusEl = document.getElementById('status');
 
-    function safeFbqCustom(eventName, params) {
-      try { fbq('trackCustom', eventName, params || {}); } catch(e) {}
-    }
-
     joinBtn.addEventListener('click', function () {
-      // Custom event for optimization
-      safeFbqCustom('telegram_entry', {
-        page: 'click',
-        source: 'button'
-      });
-
-      // UX feedback (also reduces “instant bounce” look)
       statusEl.textContent = 'Opening Telegram…';
-
-      // Give the pixel a short moment; do NOT auto-redirect
-      // (the href still opens normally)
-      const t0 = Date.now();
-      while (Date.now() - t0 < 80) { /* tiny delay */ }
     });
   </script>
 </body>
